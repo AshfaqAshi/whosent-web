@@ -19,9 +19,21 @@ body{
 }
 
 .form{
-    border-radius: 10px;
+    border-radius: 10px; 
 }
-@keyframes popup {
-    from {left:-75%;}
-    to {left: 0%;}
-  }
+
+.error-box{
+    animation-name: zoominout;
+    animation-duration: 500ms;
+}
+@keyframes zoominout {
+    0% {
+        transform: scale(1,1);
+    }
+    50% {
+        transform: scale(1.2,1.2);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}

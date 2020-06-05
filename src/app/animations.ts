@@ -13,10 +13,10 @@ state('*',style({
 transition('void=>*',group([
     
     animate('850ms ease-in-out'),
-    query('@introAnimVertical',[animateChild()])
+    query('@introAnimRight',[animateChild()])
 ]))]),
 
-trigger('introAnimVertical',[state('void',style({
+trigger('introAnimRight',[state('void',style({
     opacity:'0.1',
     position:'relative',
     right:'-75%'
@@ -28,5 +28,7 @@ state('*',style({
     right:'0%'
 })),
 
-transition('void=>*',animate('850ms ease-in-out'))])
+transition('void=>*',animate('850ms ease-in-out'))]),
+
+
 ]

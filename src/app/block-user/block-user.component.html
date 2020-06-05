@@ -1,9 +1,9 @@
 <div class="container-fluid" >
     <div class="row mx-2" style="height:100vh">
         <div @introAnim class="col-12 col-sm-7 col-md-6 col-lg-4 primary shadow p-3 form mx-auto align-self-center">
-            <h2 class="text-black text-center" @introAnimVertical >Block User</h2>
+            <h2 class="text-black text-center" @introAnimRight >Block User</h2>
             
-            <form class="mx-3" @introAnimVertical>
+            <form class="mx-3" @introAnimRight>
                 <div  class="form-group">
                   <label  for="txtPhone">Mobile Number</label>
                   <input #txtMob type="tel" class="form-control" id="txtPhone" aria-describedby="emailHelp" placeholder="Enter your mobile number">
@@ -26,8 +26,9 @@
                             <span class="sr-only">Loading...</span>
                           </div>
                     </ng-template>
-                    
                 </div>
+                <div class="text-danger text-center error-box" *ngIf="hasError">{{message}}</div>
+                <div class="text-success text-center error-box" *ngIf="hasMessage">{{message}}</div>
               </form>
         </div>
     </div>
