@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'whosent-web';
+  public data="This data is from parent";
+  public message="";
 }

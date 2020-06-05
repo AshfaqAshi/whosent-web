@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+.primary{
+    background-color: #232F34;
+    color: white;
+    font-weight: bold;
+}
+
+body{
+    background-color: #B4B3B3;
+}
+
+.button.primary{
+    background-color: #E39B2D;
+    color: black;
+}
+
+.button.secondary{
+    background-color: #ACACAC;
+    color: black;
+}
+
+.form{
+    border-radius: 10px;
+    position: relative;
+    animation-name: popup;
+    animation-duration: 1s;  
+}
+@keyframes popup {
+    from {left:-75%;}
+    to {left: 0%;}
+  }
