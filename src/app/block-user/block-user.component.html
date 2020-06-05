@@ -1,16 +1,16 @@
 <div class="container-fluid" >
     <div class="row mx-2" style="height:100vh">
-        <div class="col-12 col-sm-7 col-md-6 col-lg-4 primary shadow p-3 form mx-auto align-self-center">
-            <h2 class="text-black text-center">Block User</h2>
+        <div @introAnim class="col-12 col-sm-7 col-md-6 col-lg-4 primary shadow p-3 form mx-auto align-self-center">
+            <h2 class="text-black text-center" @introAnimVertical >Block User</h2>
             
-            <form class="mx-3" >
-                <div class="form-group">
-                  <label for="txtPhone">Mobile Number</label>
+            <form class="mx-3" @introAnimVertical>
+                <div  class="form-group">
+                  <label  for="txtPhone">Mobile Number</label>
                   <input #txtMob type="tel" class="form-control" id="txtPhone" aria-describedby="emailHelp" placeholder="Enter your mobile number">
                   <small id="emailHelp" class="form-text text-muted">We'll not store your number or transfer it to any third party.</small>
                 </div>
                 <div class="form-group">
-                  <label for="txtId">User Id</label>
+                  <label   for="txtId">User Id</label>
                   <input #txtUser type="text" class="form-control" id="txtId" placeholder="User Id" aria-describedby="userIdHelp">
                   <small id="userIdHelp" class="form-text text-muted">UserId of the user you want to block. Check your SMS message for the UserId</small>
                 </div>

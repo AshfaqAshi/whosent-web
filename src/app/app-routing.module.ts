@@ -5,6 +5,7 @@ import { BlockUserComponent } from './block-user/block-user.component';
 
 
 const routes: Routes = [
+  {path:'',component:BlockUserComponent},
   {path:'block-user', component:BlockUserComponent},
   {path:'about', component:AboutComponent}
 ];

@@ -20,9 +20,6 @@ body{
 
 .form{
     border-radius: 10px;
-    position: relative;
-    animation-name: popup;
-    animation-duration: 1s;  
 }
 @keyframes popup {
     from {left:-75%;}
