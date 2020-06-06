@@ -2,6 +2,7 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { BlockService } from '../block.service';
 import { User } from '../User';
 import{introAnimation} from '../animations';
+import * as infoData from '../infoData.json';
 
 @Component({
   selector: 'app-block-user',
@@ -13,7 +14,9 @@ export class BlockUserComponent implements OnInit {
   public isProcessing=false;
   hasError=false;
   hasMessage=false;
+  showInfo=false;
   message='';
+  infoMessage=infoData.info["whosent-block-help"];
 
   constructor(private blockService:BlockService) { }
 
@@ -23,7 +26,6 @@ export class BlockUserComponent implements OnInit {
 
 
   onBlock(userId,mobileNo){
-    
    if(userId.value && mobileNo.value){
     this.isProcessing=true;
     this.hasError=false;
@@ -31,15 +33,16 @@ export class BlockUserComponent implements OnInit {
     let user=new User(userId.value,mobileNo.value,'');
     this.blockService.blockUser(user).subscribe(data=>{
       this.isProcessing=false;
-      this.hasMessage=true;
+      
       if(data.status=='success'){
-        
-        this.message=data.status+"\n"+data.desc;
+        this.hasMessage=true;
+        this.hasError=false;
       }else{
-        this.message=data;
+        this.hasError=true;
+        this.hasMessage=false;
       }
+      this.message=data.message;
     }, error => {
-      console.log('oops', error);
       this.isProcessing=false;
       this.hasError=true;
       this.message="Sorry, an error occured!";
@@ -48,6 +51,10 @@ export class BlockUserComponent implements OnInit {
      this.hasError=true;
      this.message='Please fill in all the fields';
    }
+  }
+
+  onHelp(){
+    this.showInfo=true;
   }
 
 }

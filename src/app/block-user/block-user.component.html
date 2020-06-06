@@ -1,7 +1,14 @@
-<div class="container-fluid" >
+
+<div class="container-fluid">
     <div class="row mx-2" style="height:100vh">
-        <div @introAnim class="col-12 col-sm-7 col-md-6 col-lg-4 primary shadow p-3 form mx-auto align-self-center">
-            <h2 class="text-black text-center" @introAnimRight >Block User</h2>
+      <app-info *ngIf="showInfo" [message]="infoMessage"></app-info>
+        <div @introAnim class="col-12 col-sm-7 col-md-6 col-lg-4 primary p-3 form bottom-margin mx-auto align-self-center">
+           <div class="row">
+             <div class="col-11">
+              <h2 class="text-black text-center" @introAnimRight >Block User</h2>
+             </div>
+             <h3 data-toggle="modal" data-target="#infoModal" class="oi oi-question-mark text-right" (click)="onHelp()" style="cursor: pointer;">?</h3>
+           </div>
             
             <form class="mx-3" @introAnimRight>
                 <div  class="form-group">
@@ -18,7 +25,7 @@
                 <div class="text-right">
                     <div *ngIf="isProcessing; then loadingTemplate else btnTemplate"></div>
                     <ng-template #btnTemplate >
-                        <button class="btn button primary" (click)="onBlock(txtUser,txtMob)">Block User</button>
+                        <button class="btn button-primary shadow" (click)="onBlock(txtUser,txtMob)">Block User</button>
                     </ng-template>
 
                     <ng-template #loadingTemplate >
@@ -32,5 +39,7 @@
               </form>
         </div>
     </div>
+
+    
 </div>
 

@@ -1,4 +1,5 @@
 .primary{
+    box-shadow: 7px 4px 38px 0px black;
     background-color: #232F34;
     color: white;
     font-weight: bold;
@@ -8,12 +9,14 @@ body{
     background-color: #B4B3B3;
 }
 
-.button.primary{
+.button-primary{
+    font-weight: bold;
     background-color: #E39B2D;
     color: black;
 }
 
 .button.secondary{
+    font-weight: bold;
     background-color: #ACACAC;
     color: black;
 }
@@ -26,12 +29,42 @@ body{
     animation-name: zoominout;
     animation-duration: 500ms;
 }
+
+
+.info-box{
+    box-shadow: 7px 4px 38px 0px black;
+    border-radius: 10px;
+    background-color: #B4B3B3;
+    animation-name: zoominout;
+    animation-duration: 800ms;
+}
+
+.padding, .info-box{
+    padding: 10px;
+}
+
+.margin{
+    margin: 10px;
+}
+
+.bottom-margin{
+    margin-bottom: 10px;
+}
+
+.top-margin{
+    margin-top: 10px;
+}
+
+.modal-content { 
+    background-color: #B4B3B3; 
+ }
+
 @keyframes zoominout {
     0% {
         transform: scale(1,1);
     }
     50% {
-        transform: scale(1.2,1.2);
+        transform: scale(1.4,1.4);
     }
     100% {
         transform: scale(1,1);
