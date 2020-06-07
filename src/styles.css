@@ -1,6 +1,8 @@
 .primary{
     box-shadow: 7px 4px 38px 0px black;
-    
+    background-color: #232F34;
+    color: white;
+    font-weight: bold;
 }
 /* ----------------------------------------------------------
 Landing Page 
@@ -8,9 +10,7 @@ Landing Page
 .landing-page-bg{
     width: 100%;
     height: 100vh;
-    position: relative;
-    background: #f5f8fd url("./assets/images/intro-bg.jpg") center top no-repeat;
-    background-size: cover;
+    
 }
 #main .intro-info h2 {
     color: #413e66;
@@ -23,14 +23,22 @@ Landing Page
     color: #E39B2D;
   }
 
-.navbar, .primary{
+.navbar{
+    color: black;
+    transition: all 0.6s;
     font-weight: bold;
+}
+
+.navbar.navbar-scrolled{
     background-color: #232F34;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3);
 }
 
 html,body{
     height: 100%;
-    background-color: #B4B3B3;
+    position: relative;
+    background: #f5f8fd url("./assets/images/intro-bg.jpg") center top no-repeat;
+    background-size: cover;
 }
 
 .button-primary{
@@ -46,6 +54,8 @@ html,body{
 }
 
 .form{
+    margin-top: 20px;
+    color: white;
     border-radius: 10px; 
 }
 
@@ -79,24 +89,52 @@ html,body{
     margin-top: 10px;
 }
 
+.color-secondary{
+    color: #E39B2D;
+}
+
 .modal-content { 
     background-color: #B4B3B3; 
  }
 
- header.masthead {
-    background: url("./assets/images/smartphone.jpg") no-repeat center center;
-    background-size: cover;
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-    height: auto;
-    box-shadow: 1px 1px 30px black;
-    border-radius: 0px 0px 20px 20px;
-   min-height: 70%;
-  }
+ .btn-started{
+     padding: 10px;
+     border-radius: 10px;
+     height: auto;
+     width: auto;
+     background-color:#3393DE;
+     transition: background-color 800ms;
+     color: white;
 
-  @keyframes popup{
+ }
+ .btn-started:active, .btn-started:hover{
+    background-color: #5eb9ff;
+    cursor: pointer;
+ }
 
-  }
+ .goodone-title-yellow{
+     color: #E8F04A;
+     font-weight: bold;
+ }
+
+ .goodone-title-blue{
+     color: #3393DE;
+     font-weight: bold;
+ }
+
+ #quote span{
+     color: #E39B2D;
+ }
+
+ .large-text{
+     font-size: 2.5rem;
+ }
+
+
+ .card{
+     border-radius: 12px;
+     box-shadow: 0.1px 0.5px 10px #A9A9A9;
+ }
 
 @keyframes zoominout {
     0% {
