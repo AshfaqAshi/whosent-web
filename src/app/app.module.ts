@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule,routingComponets } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InfoComponent } from './info/info.component';
+import { HomeComponent } from './home/home.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 
 
@@ -14,7 +16,9 @@ import { InfoComponent } from './info/info.component';
   declarations: [
     AppComponent,
     routingComponets,
-    InfoComponent
+    InfoComponent,
+    HomeComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,

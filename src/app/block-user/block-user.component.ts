@@ -25,12 +25,12 @@ export class BlockUserComponent implements OnInit {
   }
 
 
-  onBlock(userId,mobileNo){
-   if(userId.value && mobileNo.value){
+  onBlock(userId,mobileNo,reason){
+   if(userId.value && mobileNo.value && reason.value){
     this.isProcessing=true;
     this.hasError=false;
     this.hasMessage=false;
-    let user=new User(userId.value,mobileNo.value,'');
+    let user=new User(userId.value,mobileNo.value,reason.value);
     this.blockService.blockUser(user).subscribe(data=>{
       this.isProcessing=false;
       
@@ -53,8 +53,6 @@ export class BlockUserComponent implements OnInit {
    }
   }
 
-  onHelp(){
-    this.showInfo=true;
-  }
+
 
 }

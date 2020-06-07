@@ -1,11 +1,35 @@
 .primary{
     box-shadow: 7px 4px 38px 0px black;
-    background-color: #232F34;
-    color: white;
+    
+}
+/* ----------------------------------------------------------
+Landing Page 
+-------------------------------------------------------------*/
+.landing-page-bg{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: #f5f8fd url("./assets/images/intro-bg.jpg") center top no-repeat;
+    background-size: cover;
+}
+#main .intro-info h2 {
+    color: #413e66;
+    margin-bottom: 40px;
+    font-size: 48px;
+    font-weight: 700;
+  }
+#main .intro-info h2 span {
     font-weight: bold;
+    color: #E39B2D;
+  }
+
+.navbar, .primary{
+    font-weight: bold;
+    background-color: #232F34;
 }
 
-body{
+html,body{
+    height: 100%;
     background-color: #B4B3B3;
 }
 
@@ -58,6 +82,21 @@ body{
 .modal-content { 
     background-color: #B4B3B3; 
  }
+
+ header.masthead {
+    background: url("./assets/images/smartphone.jpg") no-repeat center center;
+    background-size: cover;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    height: auto;
+    box-shadow: 1px 1px 30px black;
+    border-radius: 0px 0px 20px 20px;
+   min-height: 70%;
+  }
+
+  @keyframes popup{
+
+  }
 
 @keyframes zoominout {
     0% {

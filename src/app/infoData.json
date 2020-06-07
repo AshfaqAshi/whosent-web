@@ -1,6 +1,6 @@
 {
     "info":{
-        "whosent-block-help":"If you feel any user of WhoSent disturbing your privacy, you can block that particular user from sending any further SMS messages to you. WhoSent require your mobile number and UserId of the user whom you wish to block for performing block operation. WhoSent does not store your number or transfer it to any third party."
+        "whosent-block-help":"If you feel any messages sent from a WhoSent user is violating WhoSent Terms of Use and has caused you any harm, you can block that particular user from sending any further SMS messages to you. WhoSent requires your mobile number and UserId of the user whom you wish to block, for performing block operation. WhoSent does not store your number or transfer it to any third party."
     },
 
     "urls":{

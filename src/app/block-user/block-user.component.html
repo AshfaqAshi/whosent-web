@@ -1,13 +1,15 @@
 
-<div class="container-fluid">
-    <div class="row mx-2" style="height:100vh">
-      <app-info *ngIf="showInfo" [message]="infoMessage"></app-info>
-        <div @introAnim class="col-12 col-sm-7 col-md-6 col-lg-4 primary p-3 form bottom-margin mx-auto align-self-center">
+
+  <div class="h-100 d-flex flex-column">
+    <app-info [message]="infoMessage"></app-info>
+    <app-nav-bar></app-nav-bar>
+    <div class="row mx-2 flex-grow-1">
+        <div @introAnim class="col-12 col-sm-7 col-md-6 col-lg-4 primary p-3 form bottom-margin my-auto mx-auto">
            <div class="row">
              <div class="col-11">
               <h2 class="text-black text-center" @introAnimRight >Block User</h2>
              </div>
-             <h3 data-toggle="modal" data-target="#infoModal" class="oi oi-question-mark text-right" (click)="onHelp()" style="cursor: pointer;">?</h3>
+             <h3 data-toggle="modal" data-target="#infoModal" class="oi oi-question-mark text-right" style="cursor: pointer;">?</h3>
            </div>
             
             <form class="mx-3" @introAnimRight>
@@ -22,10 +24,16 @@
                   <small id="userIdHelp" class="form-text text-muted">UserId of the user you want to block. Check your SMS message for the UserId</small>
                 </div>
 
+                <div class="form-group">
+                  <label for="reason">Reason:</label>
+                  <textarea #txtReason class="form-control" rows="2" id="reason" aria-describedby="reasonHelp"></textarea>
+                  <small id="reasonHelp" class="form-text text-muted">Please provide a genuine reason for blocking this user.</small>
+                </div>
+
                 <div class="text-right">
                     <div *ngIf="isProcessing; then loadingTemplate else btnTemplate"></div>
                     <ng-template #btnTemplate >
-                        <button class="btn button-primary shadow" (click)="onBlock(txtUser,txtMob)">Block User</button>
+                        <button class="btn button-primary shadow" (click)="onBlock(txtUser,txtMob,txtReason)">Block User</button>
                     </ng-template>
 
                     <ng-template #loadingTemplate >
@@ -37,9 +45,8 @@
                 <div class="text-danger text-center error-box" *ngIf="hasError">{{message}}</div>
                 <div class="text-success text-center error-box" *ngIf="hasMessage">{{message}}</div>
               </form>
-        </div>
+    </div>
+</div>
     </div>
 
-    
-</div>
 
