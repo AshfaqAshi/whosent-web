@@ -43,6 +43,7 @@ export class BlockUserComponent implements OnInit {
       }
       this.message=data.message;
     }, error => {
+      console.log(error);
       this.isProcessing=false;
       this.hasError=true;
       this.message="Sorry, an error occured!";

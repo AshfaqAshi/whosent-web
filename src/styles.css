@@ -12,6 +12,11 @@ Landing Page
     height: 100vh;
     
 }
+
+.landing-page-bg .title{
+    animation-name: fadeInUp-custom;
+    animation-duration: 1s;
+    }
 #main .intro-info h2 {
     color: #413e66;
     margin-bottom: 40px;
@@ -29,12 +34,18 @@ Landing Page
     font-weight: bold;
 }
 
+.nav-item{
+    cursor: pointer;
+}
+
 .navbar.navbar-scrolled{
     background-color: #232F34;
     box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3);
 }
 
+
 html,body{
+    font-family: 'Manjari';
     height: 100%;
     position: relative;
     background: #f5f8fd url("./assets/images/intro-bg.jpg") center top no-repeat;
@@ -51,6 +62,10 @@ html,body{
     font-weight: bold;
     background-color: #ACACAC;
     color: black;
+}
+
+.text-secondary{
+    color: #E39B2D;
 }
 
 .form{
@@ -93,6 +108,10 @@ html,body{
     color: #E39B2D;
 }
 
+.bold{
+    font-weight: bold;
+}
+
 .modal-content { 
     background-color: #B4B3B3; 
  }
@@ -105,6 +124,8 @@ html,body{
      background-color:#3393DE;
      transition: background-color 800ms;
      color: white;
+     animation-name: fadeIn-custom;
+     animation-duration: 1.2s;
 
  }
  .btn-started:active, .btn-started:hover{
@@ -126,15 +147,99 @@ html,body{
      color: #E39B2D;
  }
 
+ #portfolio a{
+     font-size: 1.5rem;
+     font-weight: bold;
+ }
+
+
+ #footer a{
+     color: rgb(170, 218, 255);
+ }
+
+ #contact{
+    background-color: white;
+    box-shadow: 0.1px 0.1px 10px -5px black;
+    border-radius: 12px;
+ }
+
+ #footer, footer{
+     background-color:#232F34 ;
+     color: white;
+     font-weight: bold;
+ }
+
+ #footer p{
+     font-size:14px; font-size: 1.2rem;
+     color: white;
+     font-weight: normal;
+ }
+
+ #footer h3{
+     color: #E39B2D;
+ }
+
+
+
+.box-text,.box-text-bottom{
+    font-size: 2rem;
+    background-color: white;
+    box-shadow: 0.1px 0.1px 10px -5px black;
+    border-radius: 12px;
+}
+
+
+
  .large-text{
      font-size: 2.5rem;
  }
 
+ @media screen and (max-width:500px){
+    .large-text{
+        font-size: 1.7rem;
+    }
 
- .card{
-     border-radius: 12px;
-     box-shadow: 0.1px 0.5px 10px #A9A9A9;
+    .box-text,.box-text-bottom{
+        font-size: 1.6rem;
+    }
+
+   #quote .box-text{
+        position: relative;
+        top: -15%;
+    }
+
+    #quote .box-text-bottom{
+        z-index: 999;
+        position: relative;
+        top: 15%;
+    }
+
+    #portfolio a{
+        font-size: 1.3rem;
+    }
+
+
+    #footer p, #footer h3{
+        font-size: 12px;font-size: 0.9rem;
+    }
  }
+
+
+ .cardBox, .cardBox-small{
+     border-radius: 12px;
+     box-shadow: 0.1px 0.5px 10px black;
+ }
+ .cardBox-small{
+    width: 200px;
+    height: auto;
+ }
+
+ /*.cardBox:hover, .cardBox:active{
+     z-index: 999;
+     transform: scale(1.2);
+ }*/
+
+ 
 
 @keyframes zoominout {
     0% {
@@ -145,5 +250,27 @@ html,body{
     }
     100% {
         transform: scale(1,1);
+    }
+}
+
+@keyframes fadeInUp-custom{
+    from{
+        position: relative;
+        top: 40%;
+    }
+
+    to{
+        position: relative;
+        top: 0%;
+    }
+}
+
+@keyframes fadeIn-custom{
+    from{
+        opacity: 0;
+    }
+
+    to{
+    opacity: 1;
     }
 }

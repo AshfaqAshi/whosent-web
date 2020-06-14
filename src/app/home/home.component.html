@@ -1,11 +1,11 @@
-<app-nav-bar></app-nav-bar>
+<app-nav-bar navType="fixed-top" activeLink="home"></app-nav-bar>
 <section id="main" class="landing-page-bg">
     <div class="container d-flex h-100">
         <div class="row justify-content-center align-self-center">
           <div class="col-md-6 intro-info order-md-first order-last">
-            <h2 class="wow fadeInUp">Digitalize<br>Your <span>Business!</span></h2>
+            <h2 class="title">Digitalize<br>Your <span>Business!</span></h2>
             <div>
-              <div class="btn-started wow fadeInUp col-5 col-md-3 text-center" data-wow-duration="1s">Get Started</div>
+              <div id="btnStarted" class="btn-started col-5 col-md-3 text-center">Get Started</div>
             </div>
           </div>
   
@@ -16,19 +16,156 @@
   
       </div>
 </section>
-<section id="quote" class="mt-5 p-3 text-center">
-  <h1 class="wow fadeInUp">Get an app or website for your business at <br/><span>affordable price!</span></h1>
-</section>
 
-<section id="quote" class="row mx-3 p-2 wow fadeInLeft">
+<section id="quote" class="row mx-3 p-2">
   <div class="col-12 col-md-6">
-    <img src="assets/images/laptop2.jpg" class="img-fluid  card"/>
+    <img src="assets/images/laptop2.jpg" class="img-fluid  cardBox"/>
   </div>
-  <div class="col-12 col-md-6 wow fadeInUp" wow-data-delay="300ms">
-    <h1 class="large-text">Get <span>quality</span><br/>
-    Apps and websites in <span>no time!</span></h1>
-    <div class="col-12">
-      <img src="assets/images/website.jpg" class="img-fluid card"/>
+  <div class="col-12 col-md-6 my-3">
+    <h1 class="large-text">Get an app or website for your business at an <br/><span>affordable price!</span></h1>
+    <div class="row col-12">
+      <img src="assets/images/website.jpg" class="img-fluid cardBox"/>
     </div>
   </div>
 </section>
+
+<section id="quote" class="mt-5 mx-2 text-center wow fadeInUp row">
+  <h1 class="large-text p-3 col-12">Delivering <span>quality</span><br/>
+    solutions in <span>no time!</span></h1>
+ 
+ <div class="col-12 col-md-6">
+  <p class="p-2 box-text-bottom"><strong class="goodone-title-blue">good</strong><strong class="goodone-title-yellow">ONE</strong> develops
+    tailor-made creative Websites both static and dynamic, and Mobile Apps that cater to all your needs!</p>
+ </div>
+ <div class="col-12 col-md-6">
+  <img src="assets/images/laptop.jpg" class="img-fluid cardBox"/>
+</div>
+</section>
+
+<section id="quote" class="mt-2 mx-2 text-center wow fadeInUp row">
+  <h1 class="large-text p-3 bold col-12 text-secondary">Up to date technologies</h1>
+  <div class="col-12 col-md-6">
+    <img src="assets/images/smartphone.jpg" class="img-fluid cardBox"/>
+  </div>
+  <div class="col-12 col-md-6">
+    <p class="p-2 box-text"><strong class="goodone-title-blue">good</strong><strong class="goodone-title-yellow">ONE</strong> services are developed using the latest
+      frameworks and tools.<br/>With Cross-platform development frameworks, you get a single app for <strong class="text-primary">Android, iOS </strong>and <strong class="text-primary">Web</strong>!</p>
+  </div>
+  
+</section>
+
+<section id="portfolio" class="mt-lg-5 mx-2 text-center row">
+  <h1 class="large-text p-3 bold col-12 text-secondary">Completed Works</h1>
+  <div class="col-12 col-lg-4 mt-2">
+    <img src="assets/images/shot-myline2.jpg" class="img-fluid cardBox"/>
+  </div>
+  <div class="col-12 col-md-4 mt-2">
+    <img src="assets/images/shot-myline.jpg" class="img-fluid cardBox"/>
+  </div>
+
+ 
+
+  <div class="col-12 col-lg-4 mt-2">
+    <img src="assets/images/shot-myline3.jpg" class="img-fluid cardBox"/>
+  </div>
+  <div class="col-12 mt-2 text-center">
+    <a href="https://play.google.com/store/apps/details?id=com.goodone.my_line" target="_blank"> <img src="assets/images/playstore_icon.png" class="img-fluid cardBox-small"/></a>
+   <!--<div class="col-6">
+    <a href="https://play.google.com/store/apps/details?id=com.goodone.my_line" target="_blank" class="text-primary">Myline Home Delivery</a>
+   </div>-->
+  </div>
+</section>
+
+<section id="portfolio" class="mt-5 mx-2 text-center row">
+
+  <div class="col-12 col-md-6 mt-2">
+    <img src="assets/images/shot-7trade.png" class="img-fluid cardBox"/>
+  </div>
+
+  <div class="col-12 col-lg-6 mt-2">
+    <img src="assets/images/shot-7trade2.png" class="img-fluid cardBox"/>
+  </div>
+
+  <div class="col-12 col-lg-6 mt-2">
+    <img src="assets/images/shot-7trade3.png" class="img-fluid cardBox"/>
+  </div>
+  <div class="col-12 col-lg-6 mt-2">
+    <img src="assets/images/shot-7trade4.png" class="img-fluid cardBox"/>
+  </div>
+  <div class="col-12 mt-2 text-center">
+    <a href="https://www.7trade.in" target="_blank" class="text-primary">7trade.in</a>
+  </div>
+</section>
+
+<section id="contact" class="row mt-5 mb-5 mx-2 mx-lg-5 p-3 p-lg-5 wow fadeInUp">
+  <h1 class="text-center">Contact</h1>
+  <form class="mx-3 col-12">
+    <div  class="form-group">
+      <p>Let us know if you are interested in <strong class="goodone-title-blue">good</strong><strong class="goodone-title-yellow">ONE</strong> services.</p>
+      <label  for="txtPhone">Email</label>
+      <input #txtMail type="text" class="form-control" id="txtMail" placeholder="Enter your email">
+      </div>
+    <div class="form-group">
+      <label   for="txtId">Name</label>
+      <input #txtName type="text" class="form-control" id="txtName" placeholder="Enter your name">
+       </div>
+
+    <div class="form-group">
+      <label for="reason">Message:</label>
+      <textarea #txtMessage class="form-control" rows="2" id="reason"></textarea>
+     </div>
+
+    <div class="text-right">
+        <div *ngIf="isProcessing; then loadingTemplate else btnTemplate"></div>
+        <ng-template #btnTemplate >
+            <button class="btn btn-primary shadow" (click)="onSend(txtMail,txtName,txtMessage)">Send</button>
+        </ng-template>
+
+        <ng-template #loadingTemplate >
+            <div class="spinner-border button primary" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+        </ng-template>
+    </div>
+    <div class="text-danger text-center error-box" *ngIf="hasError">{{message}}</div>
+    <div class="text-success text-center error-box" *ngIf="hasMessage">{{message}}</div>
+  </form>
+</section>
+
+<!--Here the footer contents row is nested inside a container which is nested inside the footer tag because
+if the row is given as such, it overflows horizontally. To prevent this, it is nested inside a container div.
+This puts the row children in the center of the screen. To fill the background to its full width, the container div is
+nested inside a footer tag and the background of footer tag is set to primary background.-->
+<footer>
+<div class="container">
+  <div id="footer" class="row p-3">
+<div class="col-6 col-md-4">
+  <h3><b>Core Services</b></h3>
+  <p>Mobile Apps</p>
+  <p>Static Websites</p>
+  <p>Dynamic Websites</p>
+  <p>Softwares</p>
+</div>
+<div id="footer" class="col-12 col-md-4 order-last">
+  <div  class="align-self-center">
+    <h3><b>Contact</b></h3>
+  <p>Phone: +918589921999</p>
+  <p>Email:<a href="mailto:developer@goodonesolutions.in" target="_blank"> developer@goodonesolutions.in</a> </p>
+  </div>
+</div>
+
+<div class="col-6 col-md-4 order-md-last">
+  <div class="float-md-right">
+    <h3><b>Other Services</b></h3>
+  <p>Domain Name Registration</p>
+  <p>Web Hosting </p>
+  <p>SSL Installation</p>
+  <p>Web Consultation</p>
+  </div>
+</div>
+</div>
+</div>
+</footer>
+
+
+

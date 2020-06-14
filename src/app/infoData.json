@@ -4,6 +4,10 @@
     },
 
     "urls":{
-        "block-url":"http://localhost/whosent/block.php"
+        "block-url":"https://www.goodonesolutions.in/block.php",
+        "sendMessage-url":"https://www.goodonesolutions.in/send.php",
+
+        "block-url-local":"http://whosent/block.php",
+        "sendMessage-url-local":"http://whosent/send.php"
     }
 }
