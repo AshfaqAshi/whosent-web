@@ -1,3 +1,4 @@
+/* Primary Box */
 .primary{
     box-shadow: 7px 4px 38px 0px black;
     background-color: #232F34;
@@ -52,21 +53,20 @@ html,body{
     background-size: cover;
 }
 
+/* Primary Button */
 .button-primary{
     font-weight: bold;
     background-color: #E39B2D;
     color: black;
 }
 
+/* Secondary Button */
 .button.secondary{
     font-weight: bold;
     background-color: #ACACAC;
     color: black;
 }
 
-.text-secondary{
-    color: #E39B2D;
-}
 
 .form{
     margin-top: 20px;
@@ -104,9 +104,8 @@ html,body{
     margin-top: 10px;
 }
 
-.color-secondary{
-    color: #E39B2D;
-}
+/* Text Color Secondary */
+
 
 .bold{
     font-weight: bold;
@@ -188,12 +187,32 @@ html,body{
     border-radius: 12px;
 }
 
+/* Texts  */
+.small-text{
+    font-size: 1rem;
+}
 
+.content-text-normal{
+    font-size: 1.2rem;
+}
 
+.content-text-emphasized{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
  .large-text{
      font-size: 2.5rem;
  }
 
+ .color-secondary{
+    color: #E39B2D;
+}
+
+.text-secondary{
+    color: #E39B2D;
+}
+
+ /*For Mobile Screens */
  @media screen and (max-width:500px){
     .large-text{
         font-size: 1.7rem;
@@ -201,6 +220,14 @@ html,body{
 
     .box-text,.box-text-bottom{
         font-size: 1.6rem;
+    }
+
+    .content-text-normal{
+        font-size: 1rem;
+    }
+
+    .content-text-emphasized{
+        font-size: 1.2rem;
     }
 
    #quote .box-text{
@@ -234,10 +261,6 @@ html,body{
     height: auto;
  }
 
- /*.cardBox:hover, .cardBox:active{
-     z-index: 999;
-     transform: scale(1.2);
- }*/
 
  
 
